@@ -1,0 +1,11 @@
+<%- include("partials/header.ejs") %>
+<h1>HOME</h1>
+<p><%= homeStarting %></p>
+<%uPost.forEach((tie) => {%>
+  <h1><%= tie.Voru %></h1>
+  <p>
+    <%= tie.Tron.substring(0, 100) + " ..." %>
+    <a href="/post/<%= tie.Voru %>">Read More .. </a> 
+  </p>
+<%})%>
+<%- include("partials/footer.ejs") %>
